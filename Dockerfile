@@ -29,6 +29,7 @@ RUN mkdir -p src && \
 COPY src ./src
 COPY migrations ./migrations
 COPY .env ./
+COPY static ./static
 
 # Touch main.rs to prevent cached release build
 RUN touch src/main.rs

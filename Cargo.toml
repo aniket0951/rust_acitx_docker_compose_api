@@ -1,0 +1,12 @@
+[package]
+name = "to_do_app_with_docker"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+diesel = { version = "2.1.4", features = ["postgres", "r2d2"] }  # Downgraded from 2.2.9
+actix-web = { version = "4.4.0", default-features = false, features = ["macros", "rustls"] }  # Downgraded from 4.9.0
+serde = { version = "1.0.197", default-features = false, features = ["derive"] }  # Downgraded from 1.0.217
+serde_json = { version = "1.0.114", default-features = false }  # Downgraded from 1.0.138
+dotenv = { version = "0.15.0", default-features = false }  # Slightly updated version that works with 1.81.0
+env_logger = "0.11"
